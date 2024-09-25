@@ -1,0 +1,17 @@
+<h2 mat-dialog-title>Hi</h2>
+<mat-dialog-content class="post">
+  <p>What's your name?</p>
+  <mat-form-field class="post__input">
+    <mat-label>Name</mat-label>
+    <input matInput [(ngModel)]="name" />
+  </mat-form-field>
+  <p>What do you want to post?</p>
+  <mat-form-field class="post__input">
+    <mat-label>Post</mat-label>
+    <textarea matInput [(ngModel)]="message" maxlength="280"></textarea>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="cancel()">Cancel</button>
+  <button mat-button (click)="createPost()">Post</button>
+</mat-dialog-actions>
